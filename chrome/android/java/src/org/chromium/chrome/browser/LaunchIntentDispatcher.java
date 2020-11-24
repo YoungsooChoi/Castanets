@@ -153,6 +153,7 @@ public class LaunchIntentDispatcher implements IntentHandler.IntentHandlerDelega
         // Append extra arguments for Castanets.
         String args = IntentUtils.safeGetStringExtra(intent, "args");
         if (args != null) {
+          Log.e(TAG, "YSYS ::: args = " + args);
           CommandLine.getInstance().appendSwitchesAndArguments(args.split("\\s+"));
         }
     }

@@ -1273,8 +1273,11 @@ public class ChromeTabbedActivity
      */
     private void createInitialTab() {
         String url = HomepageManager.getHomepageUri();
+        Log.w(TAG, "YSYS ::: url = " + url);
         if (CommandLine.getInstance().hasSwitch(BaseSwitches.ENABLE_SERVICE_OFFLOADING)) {
+            Log.w(TAG, "YSYS ::: in BaseSwitches.ENABLE_SERVICE_OFFLOADING ######################");
             if (CommandLine.getInstance().hasSwitch("loadurl")){
+                Log.w(TAG, "YSYS ::: in loadurl ######################");
                 String loadUrl = CommandLine.getInstance().getSwitchValue("loadurl");
                 if(loadUrl != null){
                     url = loadUrl;
